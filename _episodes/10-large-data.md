@@ -24,16 +24,24 @@ for the high resolution CNRM-CM6-1-HR model.
 
 > ## Data download
 >
-> Instructors teaching this lesson can download the CNRM-CM6-1-HR
-> daily precipitation data from the Earth System Grid Federation (ESGF).
-> See the [instructor notes](https://carpentries-lab.github.io/python-aos-lesson/guide/index.html) for details.
-> Since it is a very large download (45 GB),
-> learners are not expected to download the data.
-> (None of the exercises at the end of the lesson require downloading the data.)
+> We'll look at CMIP6 data. Since the files are large (48GB), it is optional for learners to download the dataset. 
+> However, should the learners wish to proceed and download the data, this can be done in different ways.
 >
-{: .challenge}
+> On NeSI, we've downloaded the data for you and stored them under `/nesi/nobackup/icshmo_python_aos/data`.
+>
+> If you wish to download the data yourself, you can use the [Synda software](https://prodiguer.github.io/synda/). 
+> For NIWA users, the following commands will search the Earth System Grid Federation (ESGF) catalogue, 
+> find out the size of the dataset and asynchronously download the data on mahuika:
+>~~~
+>$ source /nesi/project/niwa02916/synda_env.sh
+>$ synda search source_id=CNRM-CM6-1-HR variable=pr table_id=day experiment_id=historical
+>$ synda stat CMIP6.CMIP.CNRM-CERFACS.CNRM-CM6-1-HR.historical.r1i1p1f2.day.pr.gr.v20191021
+>$ synda install CMIP6.CMIP.CNRM-CERFACS.CNRM-CM6-1-HR.historical.r1i1p1f2.day.pr.gr.v20191021
+>~~~
+>{: .challenge}
+>You can then find the files under `$ST_HOME/data/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1-HR/historical/r1i1p1f2/day/pr/gr/v20191021`. 
 
-At the Unix shell,
+We assume that you have copied the data into your `data/` directory. At the Unix shell,
 we can inspect the dataset and see that the daily maximum precipitation data 
 for the 1850-2014 period has been broken up into 25-year chunks and
 spread across seven netCDF files,
