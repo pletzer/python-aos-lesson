@@ -25,7 +25,7 @@ please follow The Carpentries [software installation instructions](https://carpe
 >
 {: .callout}
 
-## Data
+## Code and Data
 
 In your bash terminal, you will need to
 ~~~
