@@ -263,7 +263,7 @@ $ python plot_precipitation_climatology.py data/pr_Amon_ACCESS-CM2_historical_r1
 > > ## Solution
 > >
 > > ~~~
-> > from types import Literal
+> > from typing import Literal
 > > ...
 > > def main(pr_file: str, season: Literal['DJF', 'MAM', 'JJA', 'SON'], output_file: str):
 > > ~~~                         
@@ -333,7 +333,7 @@ $ python plot_precipitation_climatology.py data/pr_Amon_ACCESS-CM2_historical_r1
 > > ...
 > >
 > > def main(pr_file: str, season: Literal['DJF', 'MAM', 'JJA', 'SON'], output_file: str, *, 
-> >          gridlines: bool=False, cbar_levels: list[float]=None)):
+> >          gridlines: bool=False, cbar_levels: list[float]=None):
 > >
 > >     ...
 > >     :param cbar_levels: list of levels / tick marks to appear on the colourbar
