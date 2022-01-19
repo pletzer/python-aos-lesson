@@ -57,8 +57,6 @@ In the `data` directory, download the following files:
 (Windows users may need to open the Anaconda Prompt program
 and run `conda init bash` to make conda available at the Bash Shell.)
 
- **Step 1**
-
 Add the conda-forge channel:
 ~~~
 $ conda config --add channels conda-forge
