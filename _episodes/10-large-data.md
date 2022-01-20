@@ -43,7 +43,7 @@ for the high resolution CNRM-CM6-1-HR model.
 >you can copy the data from 
 >~~~
 >$ scp mahuika:/nesi/nobackup/icshmo_python_aos/data/ data
->~~~{: .challenge} 
+>{: .challenge} 
 
 Once the data are copied into the `data/` directory,
 we can inspect the dataset and see that the daily maximum precipitation data 
