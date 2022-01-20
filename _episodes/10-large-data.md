@@ -39,9 +39,10 @@ for the high resolution CNRM-CM6-1-HR model.
 >$ synda install CMIP6.CMIP.CNRM-CERFACS.CNRM-CM6-1-HR.historical.r1i1p1f2.day.pr.gr.v20191021
 >~~~
 >{: .challenge}
->You can then find the files under `$ST_HOME/data/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1-HR/historical/r1i1p1f2/day/pr/gr/v20191021`. 
+>You can then find the files under `$ST_HOME/data/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1-HR/historical/r1i1p1f2/day/pr/gr/v20191021`. Alternatively, 
+>you can copy the data from `/nesi/nobackup/icshmo_python_aos/data/`. 
 
-We assume that you have copied the data into your `data/` directory. At the Unix shell,
+Once the data are copied into the `data/` directory,
 we can inspect the dataset and see that the daily maximum precipitation data 
 for the 1850-2014 period has been broken up into 25-year chunks and
 spread across seven netCDF files,
