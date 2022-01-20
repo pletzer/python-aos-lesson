@@ -32,17 +32,22 @@ for the high resolution CNRM-CM6-1-HR model.
 > If you wish to download the data yourself, you can use the [Synda software](https://prodiguer.github.io/synda/). 
 > For NIWA users, the following commands will search the Earth System Grid Federation (ESGF) catalogue, 
 > find out the size of the dataset and asynchronously download the data on mahuika:
+>
 > ~~~
 > $ source /nesi/project/niwa02916/synda_env.sh
 > $ synda search source_id=CNRM-CM6-1-HR variable=pr table_id=day experiment_id=historical
 > $ synda stat CMIP6.CMIP.CNRM-CERFACS.CNRM-CM6-1-HR.historical.r1i1p1f2.day.pr.gr.v20191021
-> $ synda install CMIP6.CMIP.CNRM-CERFACS.CNRM-CM6-1-HR.historical.r1i1p1f2.day.pr.gr.v20191021
-> {: .challenge}
-> You can then find the files under `$ST_HOME/data/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1-HR/historical/r1i1p1f2/day/pr/gr/v20191021`. Alternatively, 
-> you can copy the data from 
+> $ synda install CMIP6.CMIP.CNRM-CERFACS.CNRM-CM6-1-HR.historical.r1i1p1f2.day.pr.gr.v20191021a
 > ~~~
-> $ scp mahuika:/nesi/nobackup/icshmo_python_aos/data/ data
-> {: .challenge} 
+> {: .language-bash}
+> 
+> You can then find the files under `$ST_HOME/data/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1-HR/historical/r1i1p1f2/day/pr/gr/v20191021`. Alternatively, 
+> you can copy the data from the Mahuika platform: 
+> 
+> ~~~
+> $ scp mahuika:/nesi/nobackup/icshmo_python_aos/data/ data/
+> ~~~
+> {: .language-bash} 
 
 Once the data are copied into the `data/` directory,
 we can inspect the dataset and see that the daily maximum precipitation data 
