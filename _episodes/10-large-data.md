@@ -40,7 +40,10 @@ for the high resolution CNRM-CM6-1-HR model.
 >~~~
 >{: .challenge}
 >You can then find the files under `$ST_HOME/data/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1-HR/historical/r1i1p1f2/day/pr/gr/v20191021`. Alternatively, 
->you can copy the data from `/nesi/nobackup/icshmo_python_aos/data/`. 
+>you can copy the data from 
+>~~~
+>$ scp mahuika:/nesi/nobackup/icshmo_python_aos/data/ data
+>~~~{: .challenge} 
 
 Once the data are copied into the `data/` directory,
 we can inspect the dataset and see that the daily maximum precipitation data 
