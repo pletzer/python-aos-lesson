@@ -37,17 +37,13 @@ for the high resolution CNRM-CM6-1-HR model.
 > $ source /nesi/project/niwa02916/synda_env.sh
 > $ synda search source_id=CNRM-CM6-1-HR variable=pr table_id=day experiment_id=historical
 > $ synda stat CMIP6.CMIP.CNRM-CERFACS.CNRM-CM6-1-HR.historical.r1i1p1f2.day.pr.gr.v20191021
-> $ synda install CMIP6.CMIP.CNRM-CERFACS.CNRM-CM6-1-HR.historical.r1i1p1f2.day.pr.gr.v20191021a
+> $ synda install CMIP6.CMIP.CNRM-CERFACS.CNRM-CM6-1-HR.historical.r1i1p1f2.day.pr.gr.v20191021
 > ~~~
 > {: .language-bash}
 > 
 > You can then find the files under `$ST_HOME/data/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1-HR/historical/r1i1p1f2/day/pr/gr/v20191021`. Alternatively, 
-> you can copy the data from the Mahuika platform: 
+> you can copy the data from `/nesi/nobackup/icshmo_python_aos/data/*.nc` on NeSI's Mahuika platform:
 > 
-> ~~~
-> $ scp mahuika:/nesi/nobackup/icshmo_python_aos/data/*.nc data/
-> ~~~
-> {: .language-bash} 
 
 Once the data are copied into the `data/` directory,
 we can inspect the dataset and see that the daily maximum precipitation data 
@@ -89,7 +85,7 @@ while `?` matches any one character,
 just like at the Unix shell. 
 
 ~~~
-pr_files = glob.glob('data/pr*.nc')
+pr_files = glob.glob('data/pr_day_CNRM-CM6-1-HR_*.nc')
 pr_files.sort()
 print(pr_files)
 ~~~
@@ -192,8 +188,8 @@ We can see that our `dset` object is an `xarray.Dataset`,
 but notice now that each variable has type `dask.array`
 with a `chunksize` attribute.
 Dask will access the data chunk-by-chunk (rather than all at once),
-which is fortunate because at 45GB the full size of our dataset
-is much larger than the available RAM on our laptop (17GB in this example). 
+which is fortunate because at 48GB the full size of our dataset
+is much larger than the available RAM on most laptops.
 Dask can also distribute chunks across multiple cores if we ask it to
 (i.e. parallel processing).
 
