@@ -319,13 +319,6 @@ It's faster than, but not a quarter of, the original 3 minutes and 44 seconds
 because there's a time cost associated with
 setting up and coordinating jobs across all the cores.
 
-> ## Parallel isn't always best
->
-> For smaller or very complex data processing tasks,
-> the time associated with setting up and coordinating jobs across multiple cores
-> can mean it takes longer to run in parallel than on just one core.
->
-{: .callout}
 
 Now that we've computed the daily maximum precipitation,
 we can go ahead and plot it:
@@ -372,7 +365,41 @@ plt.show()
 > The [xarray tutorial](https://xarray-contrib.github.io/xarray-tutorial/scipy-tutorial/06_xarray_and_dask.html#Automatic-parallelization-with-apply_ufunc-and-map_blocks)
 > from SciPy 2020 explains how to do this.
 >
-{: .callout} 
+{: .callout}
+
+> ## Parallel computing on NeSI
+
+> Sometimes, the computing power on your laptop or desktop is not enough. At this point you may
+> want to run your analysis on a supercomputer. The following script will compute the global
+> maximum of precipitation across all times, latitudes and longitudes.
+> ~~~
+> import glob
+> import xarray as xr
+> import dask
+> import time
+> 
+> if __name__ == '__main__':
+>     tic = time.time()
+> 
+>     with dask.config.set(scheduler='processes'):
+>         pr_files = glob.glob('/nesi/nobackup/icshmo_python_aos/data/*.nc')
+>         ds = xr.open_mfdataset(pr_files, chunks={'time': 100})
+>         prmax_time = ds['pr'].max(('time', 'lat', 'lon'), keep_attrs=True)
+> 
+>         pr = prmax_time.compute()
+> 
+>     print(prmax_time.data)
+>     toc = time.time()
+>     print(f'max: {pr.values} took {toc - tic:.2f} sec')
+> ~~~
+> {: .language-python}
+> 
+> You can submit the script with
+> ~~~
+> $ srun --cpus-per-task=10 --mem=10gb --ntasks=1 --hint=nomultithread python histor
+> ~~~
+> {. .language-bash}
+{: .challenge}
 
 > ## Alternatives to Dask
 > 
