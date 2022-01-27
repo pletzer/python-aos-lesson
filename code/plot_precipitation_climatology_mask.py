@@ -1,3 +1,7 @@
+# to ignore warnings about Shapely
+import warnings
+warnings.filterwarnings("ignore")
+
 import pdb
 import defopt
 

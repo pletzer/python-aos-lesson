@@ -1,3 +1,7 @@
+# to ignore warnings about Shapely
+import warnings
+warnings.filterwarnings("ignore")
+
 import xarray as xr
 import cartopy.crs as ccrs
 import matplotlib.pyplot as plt
