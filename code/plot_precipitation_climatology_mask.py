@@ -39,7 +39,6 @@ def apply_mask(darray, sftlf_file, realm):
       realm (str): Realm to mask
     
     """
-   
     dset = xr.open_dataset(sftlf_file)
     if realm == 'land':
         masked_darray = darray.where(dset['sftlf'].data < 50)
