@@ -259,12 +259,12 @@ but `xarray` won't actually do the computation
 until the data is needed (e.g. to create a plot or write to a netCDF file). 
 
 To force `xarray` to do the computation
-we can use `.compute()` with the `%%time` Jupyter notebook command
+we can use `.load()` with the `%%time` Jupyter notebook command
 to record how long it takes:
 
 ~~~
 %%time
-pr_max.compute()
+pr_max.load()
 ~~~
 {: .language-python}
 
@@ -303,7 +303,7 @@ Dashboard: http://127.0.0.1:8787/status   Cores: 4
 
 ~~~
 %%time
-pr_max.compute()
+pr_max.load()
 ~~~
 {: .language-python}
 
@@ -386,7 +386,7 @@ plt.show()
 >         ds = xr.open_mfdataset(pr_files, chunks={'time': 100})
 >         prmax_time = ds['pr'].max(('time', 'lat', 'lon'), keep_attrs=True)
 > 
->         pr = prmax_time.compute()
+>         prmax_time.load()
 > 
 >     print(prmax_time.data)
 >     toc = time.time()
@@ -396,7 +396,7 @@ plt.show()
 > 
 > You can submit the script with
 > ~~~
-> $ srun --cpus-per-task=10 --mem=10gb --ntasks=1 --hint=nomultithread python histor
+> $ srun --cpus-per-task=10 --mem=10gb --ntasks=1 --hint=nomultithread python historical_max_precip.py
 > ~~~
 > {. .language-bash}
 {: .challenge}
