@@ -231,22 +231,6 @@ $ conda list
 > ~~~
 > {: .language-bash}
 >
-> For ease of sharing the YAML file,
-> it can be uploaded to your account at the Anaconda Cloud website,
->
-> ~~~
-> $ conda env upload -f pyaos-lesson.yml
-> ~~~
-> {: .language-bash}
->
-> so that others can re-create the environment by simply refering to your Anaconda username:
-> 
-> ~~~
-> $ conda env create damienirving/pyaos-lesson
-> $ conda activate pyaos-lesson
-> ~~~
-> {: .language-bash}
->
 > The ease with which others can recreate your environment (on any operating system)
 > is a huge breakthough for reproducible research.
 >
