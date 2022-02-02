@@ -39,12 +39,6 @@ $ cd python-aos-lesson/code
 ~~~
 {: .language-bash}
 
-and create a `data` folder 
-~~~
-$ mkdir data
-~~~
-{: .language-bash}
-
 In the `data` directory, download the following files:
    - [pr_Amon_ACCESS-CM2_historical_r1i1p1f1_gn_201001-201412.nc][pr_access-cm_file]
    - [pr_Amon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_201001-201412.nc][pr_access-esm_file]
