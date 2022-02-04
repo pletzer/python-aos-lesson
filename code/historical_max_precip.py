@@ -15,13 +15,13 @@ if __name__ == '__main__':
         pr_files = glob.glob('/nesi/nobackup/icshmo_python_aos/data/*.nc')
 
         ds = xr.open_mfdataset(pr_files, chunks={'time': 100})
-        prmax_time = ds['pr'].max(('time', 'lat', 'lon'), keep_attrs=True)
+        prmax_all = ds['pr'].max(('time', 'lat', 'lon'), keep_attrs=True)
 
-        pr = prmax_time.compute()
+        prmax_all.load()
 
-    print(prmax_time.data)
+    print(prmax_all.data)
     toc = time.time()
-    print(f'max: {pr.values} took {toc - tic:.2f} sec')
+    print(f'max: {prmax_all.values} took {toc - tic:.2f} sec')
 
 
 
