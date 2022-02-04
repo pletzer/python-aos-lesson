@@ -384,19 +384,19 @@ plt.show()
 >     with dask.config.set(scheduler='processes'):
 >         pr_files = glob.glob('/nesi/nobackup/icshmo_python_aos/data/*.nc')
 >         ds = xr.open_mfdataset(pr_files, chunks={'time': 100})
->         prmax_time = ds['pr'].max(('time', 'lat', 'lon'), keep_attrs=True)
+>         prmax_all = ds['pr'].max(('time', 'lat', 'lon'), keep_attrs=True)
 > 
->         prmax_time.load()
+>         prmax_all.load()
 > 
->     print(prmax_time.data)
+>     print(prmax_all.data)
 >     toc = time.time()
->     print(f'max: {pr.values} took {toc - tic:.2f} sec')
+>     print(f'max: {prmax_all.values} took {toc - tic:.2f} sec')
 > ~~~
 > {: .language-python}
 > 
 > You can submit the script with
 > ~~~
-> $ srun --cpus-per-task=10 --mem=10gb --ntasks=1 --hint=nomultithread python historical_max_precip.py
+> $ srun --cpus-per-task=10 --mem=3gb --ntasks=1 --hint=nomultithread python historical_max_precip.py
 > ~~~
 > {: .language-bash}
 {: .challenge}
