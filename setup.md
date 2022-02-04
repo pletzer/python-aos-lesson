@@ -35,7 +35,8 @@ $ git clone https://github.com/pletzer/python-aos-lesson
 
 Then change your folder to 
 ~~~
-$ cd python-aos-lesson/code
+$ mkdir -p python-aos-lesson/code/data
+$ cd python-aos-lesson/code/data
 ~~~
 {: .language-bash}
 
