@@ -400,9 +400,10 @@ plt.show()
 > ~~~
 > {: .language-bash}
 > 
-> ![Parallel scalability](../fig/10-pr-speedup.png)
-> 
 {: .challenge}
+
+![Parallel scalability](../fig/10-pr-speedup.png)
+
 
 > ## Alternatives to Dask
 > 
