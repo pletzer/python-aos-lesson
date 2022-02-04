@@ -398,7 +398,7 @@ plt.show()
 > ~~~
 > $ srun --cpus-per-task=10 --mem=10gb --ntasks=1 --hint=nomultithread python historical_max_precip.py
 > ~~~
-> {. .language-bash}
+> {: .language-bash}
 {: .challenge}
 
 > ## Alternatives to Dask
