@@ -304,8 +304,8 @@ Dashboard: http://127.0.0.1:8787/status   Cores: 4
 Now rerun your computation with the distributed clients running:
 
 ~~~
-pr_max = dset['pr'].max('time', keep_attrs=True)
 %%time
+pr_max = dset['pr'].max('time', keep_attrs=True)
 pr_max.load()
 ~~~
 {: .language-python}
