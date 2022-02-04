@@ -94,4 +94,4 @@ To check that everything is installed correctly, follow the instructions below.
 [pr_access-cm_file]: {{ "https://carpentries-lab.github.io/python-aos-lesson/data/pr_Amon_ACCESS-CM2_historical_r1i1p1f1_gn_201001-201412.nc" | relative_url }}
 [pr_access-esm_file]: {{ "https://carpentries-lab.github.io/python-aos-lesson/data/pr_Amon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_201001-201412.nc" | relative_url }}
 [sftlf_access-cm_file]: {{"https://carpentries-lab.github.io/python-aos-lesson/data/sftlf_fx_ACCESS-CM2_historical_r1i1p1f1_gn.nc" | relative_url }}
-[sftlf_access-esm_file]: {{ "/data/sftlf_fx_ACCESS-ESM1-5_historical_r1i1p1f1_gn.nc" | relative_url }}
+[sftlf_access-esm_file]: {{ "https://carpentries-lab.github.io/python-aos-lesson/data/sftlf_fx_ACCESS-ESM1-5_historical_r1i1p1f1_gn.nc" | relative_url }}
