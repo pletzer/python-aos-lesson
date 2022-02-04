@@ -403,12 +403,12 @@ plt.show()
 > time plateaus, and often even decreases beyond a number of processes. This is shown in the plot below where we can see that the maximum 
 > performance is achieved using 8 processes. 
 > 
-> Also note that the parallel efficiency, the ratio between the observed and the ideal speedup 
+> Also note that the parallel efficiency, the ratio between the observed (blue solid line) and the ideal speedup 
 > (green dashed line) is often less than perfect (less than 100 percent). This can be due to some tasks taking less time than others, which 
 > causes some processes to wait for others to finish. Another reason for imperfect parallel scalability is that more processes demand more data
 > to be instantiated and copied between processes, which can also slow down execution.
 > 
-> Ultimately, the speedup will also depend on the size the of data, more scalability can be expected with larger datasets, 
+> Ultimately, the speedup will also depend on the size of your data, more scalability can be expected with larger datasets, 
 > and on chunking as well as other factors. Try to change the chunking and rerun the problem to see how the parallel scalability changes.
 {: .challenge}
 
