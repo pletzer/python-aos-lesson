@@ -399,6 +399,7 @@ plt.show()
 > $ srun --cpus-per-task=10 --mem=3gb --ntasks=1 --hint=nomultithread python historical_max_precip.py
 > ~~~
 > {: .language-bash}
+> ![Parallel scalability](../fig/10-pr-speedup.png .png)
 {: .challenge}
 
 > ## Alternatives to Dask
