@@ -26,8 +26,8 @@ keypoints:
 >
 {: .callout}
 
-Now that we've written `plot_precipitation_climatology.py`,
-how can we be sure that it's producing reliable results?
+In the `code/` directory, we have written `plot_precipitation_climatology_mask.py`, which allows one to mask either land or ocean.
+How can we be sure that it's producing reliable results?
 
 The first step toward getting the right answers from our programs
 is to assume that mistakes *will* happen
