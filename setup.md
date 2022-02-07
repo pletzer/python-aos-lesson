@@ -11,7 +11,7 @@ you will need access to the following:
 * The bash shell
 * A text editor
 * Git
-* Anaconda or Miniconda (which is a Python distribution)
+* Anaconda or Miniconda, which are Python distributions
 
 If you don't already have these installed,
 please follow The Carpentries [software installation instructions](https://carpentries.github.io/workshop-template/#setup).
